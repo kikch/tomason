@@ -13,7 +13,6 @@ var markerData=[
 ];
 
 
-getCSV();
 /*
 var markerData=[
 {name:result[1][0],lat:result[1][1],lng:result[1][2]},
@@ -93,6 +92,8 @@ function convertCSVtoArray(str){
     }
     alert(result[1][1]);
 }
+
+getCSV();
 
 /*住所から座標を取得
 var geocoder = new google.maps.Geocoder();
