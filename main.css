@@ -4,6 +4,30 @@
     padding:10px;
 }
 
+.element{
+    margin-left:80px;
+    padding-bottom:20px;
+}
+
+table{
+   width: 500px;
+}
+
+
+table th{
+  padding: 10px;
+  color:skyblue;
+  background:#fff5e5;
+  border:solid 3px black:
+}
+
+table td{
+  padding: 3px 10px;
+  background:#f5f5f5;
+  border:solid 3px black:
+
+}
+
 #map{
 width:640px;
 height:400px;
@@ -11,7 +35,7 @@ background-color:gray;
 }
 
 .form{
-    margin-left:20px;
+    margin-left:30px;
     padding-top:10px;
 }
 

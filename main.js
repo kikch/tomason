@@ -31,6 +31,10 @@ var map = new google.maps.Map(document.getElementById('map'),{
     center:cities["京都"],
     zoom:12,
     mapTypeControl:false, // 航空写真などの切り替え
+    streetViewControl:false,
+    zoomControl:true,
+    scaleControl:true,
+    fullscreenControl:true,
 });
 var select = document.getElementById("cities"); // 大阪、京都に変更
 select.addEventListener("change",function(e){
@@ -42,7 +46,11 @@ for (var i = 0; i < markerData.length; i++){
     marker[i] = new google.maps.Marker({
         position:markerLatLng,
         map:map,
-        label:"ト",
+        icon:{
+            url:"./img/thomason.png",
+            scaledSize: new google.maps.Size(40,40)
+        },
+        //label:"ト",
 });
 infoWindow[i] = new google.maps.InfoWindow({
     content:'<div class="sample">'+markerData[i]['name'] + '</div>'
@@ -59,6 +67,7 @@ function markerEvent(i){
         infoWindow[i].open(map,marker[i]);
     });
 }
+
 
 function addMessage(msg){
     var events=document.getElementById("messages");
