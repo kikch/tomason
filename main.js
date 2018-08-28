@@ -12,9 +12,9 @@ var markerData=[
 {name:'Tomason_5',lat:35.681971,lng:139.786751},
 ];
 
-var result=[];
-/*
+
 getCSV();
+/*
 var markerData=[
 {name:result[1][0],lat:result[1][1],lng:result[1][2]},
 {name:result[2][0],lat:result[2][1],lng:result[2][2]},
@@ -78,7 +78,7 @@ function addMessage(msg){
 
 function getCSV(){
     var req = new XMLHttpRequest();
-    req.open("get","tomason.csv",true);
+    req.open("get","./csv/test.csv",true);
     req.send(null);
     req.onload = function(){
         convertCSVtoArray(req.responseText);
@@ -86,11 +86,12 @@ function getCSV(){
 }
 
 function convertCSVtoArray(str){
-    var tmp = str.split("\n");
+    var result = [];
+    var tmp = str.split("\r");
     for(var i = 0; i < tmp.length; i++){
         result[i] = tmp[i].split(',');
     }
-    //alert(result[1][2]);
+    alert(result[0][2]);
 }
 
 /*住所から座標を取得
