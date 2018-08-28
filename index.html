@@ -11,11 +11,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
 <script src="./js/jquery.csvToTable.js"></script>
 <script src="main.js"></script>
-<script>
-$(function(){
-$('.table_csv').CSVToTable("./csv/test.csv");
-});
-</script>
+
 </head>
 
 <body>
@@ -39,7 +35,11 @@ $('.table_csv').CSVToTable("./csv/test.csv");
 <div class="element">
 <h2>トマソンリスト</h2>
 <div class="table_csv"></div>
-
+<script>
+$(function(){
+$('.table_csv').CSVToTable("./csv/test.csv");
+});
+</script>
 </div>
 
 <div class="events">
