@@ -91,7 +91,7 @@ function convertCSVtoArray(str){
     for(var i = 0; i < tmp.length; i++){
         result[i] = tmp[i].split(',');
     }
-    alert(result[1][2]);
+    alert(result[1][1]);
 }
 
 /*住所から座標を取得
