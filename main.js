@@ -90,7 +90,7 @@ function convertCSVtoArray(str){
     for(var i = 0; i < tmp.length; i++){
         result[i] = tmp[i].split(',');
     }
-    alert(result[1][1]);
+    //alert(result[1][1]);
 }
 
 getCSV();
