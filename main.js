@@ -75,7 +75,7 @@ for (var i = 0; i < markerData2.length; i++){
         position:markerLatLng2,
         map:map,
         icon:{
-            url:"./img/thomason.png",
+            url:"./img/red.png",
             scaledSize: new google.maps.Size(32,32)
         },
 });
