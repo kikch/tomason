@@ -57,11 +57,11 @@ for (var i = 0; i < markerData1.length; i++){
     marker1[i] = new google.maps.Marker({
         position:markerLatLng1,
         map:map,
-        //icon:{
-        //    url:"./img/red.png",
-        //    scaledSize: new google.maps.Size(32,32)
-        //},
-        label:"ト",
+        icon:{
+            url:"./img/blue.png",
+            scaledSize: new google.maps.Size(32,32)
+        },
+        //label:"ト",
 });
 infoWindow1[i] = new google.maps.InfoWindow({
     content:'<div class="sample">'+markerData1[i]['name'] + '</div>'
