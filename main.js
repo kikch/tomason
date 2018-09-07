@@ -4,7 +4,7 @@ var cities={
 "大阪":{lat:34.7024854,lng:135.4937619},
 };
 
-var markerData=[
+var markerData1=[
 {name:'Tomason_1',lat:35.681971,lng:139.746751},
 {name:'Tomason_2',lat:35.681971,lng:139.756751},
 {name:'Tomason_3',lat:35.681971,lng:139.766751},
@@ -12,6 +12,13 @@ var markerData=[
 {name:'Tomason_5',lat:35.681971,lng:139.786751},
 ];
 
+var markerData2=[
+{name:'Tomason_6',lat:34.946982,lng:135.753936},
+{name:'Tomason_7',lat:34.956982,lng:135.753936},
+{name:'Tomason_8',lat:34.966982,lng:135.753936},
+{name:'Tomason_9',lat:34.976982,lng:135.753936},
+{name:'Tomason_10',lat:34.986982,lng:135.753936},
+];
 
 
 
@@ -23,9 +30,12 @@ var markerData=[
 ];
 */
 
-var marker=[];
-var infoWindow=[];
-var markerLatLng;
+var marker1=[];
+var marker2=[];
+var infoWindow1=[];
+var infoWindow2=[];
+var markerLatLng1;
+var markerLatLng2;
 
 function initMap(){
 var map = new google.maps.Map(document.getElementById('map'),{
@@ -42,30 +52,56 @@ select.addEventListener("change",function(e){
     var key = e.target.value;
     map.setCenter(cities[key]);
 });
-for (var i = 0; i < markerData.length; i++){
-    markerLatLng = new google.maps.LatLng({lat:markerData[i]['lat'],lng:markerData[i]['lng']});
-    marker[i] = new google.maps.Marker({
-        position:markerLatLng,
+for (var i = 0; i < markerData1.length; i++){
+    markerLatLng1 = new google.maps.LatLng({lat:markerData1[i]['lat'],lng:markerData1[i]['lng']});
+    marker1[i] = new google.maps.Marker({
+        position:markerLatLng1,
+        map:map,
+        //icon:{
+        //    url:"./img/red.png",
+        //    scaledSize: new google.maps.Size(32,32)
+        //},
+        label:"ト",
+});
+infoWindow1[i] = new google.maps.InfoWindow({
+    content:'<div class="sample">'+markerData1[i]['name'] + '</div>'
+});
+markerEvent1(i);
+}
+
+for (var i = 0; i < markerData2.length; i++){
+    markerLatLng2 = new google.maps.LatLng({lat:markerData2[i]['lat'],lng:markerData2[i]['lng']});
+    marker2[i] = new google.maps.Marker({
+        position:markerLatLng2,
         map:map,
         icon:{
             url:"./img/thomason.png",
-            scaledSize: new google.maps.Size(40,40)
+            scaledSize: new google.maps.Size(32,32)
         },
-        //label:"ト",
 });
-infoWindow[i] = new google.maps.InfoWindow({
-    content:'<div class="sample">'+markerData[i]['name'] + '</div>'
+infoWindow2[i] = new google.maps.InfoWindow({
+    content:'<div class="sample">'+markerData2[i]['name'] + '</div>'
 });
-markerEvent(i);
+markerEvent2(i);
 }
 }
 
-function markerEvent(i){
-    marker[i].addListener('click',function(){
-    for (var j = 0; j < markerData.length; j++){ // Windowは一つだけ表示
-        infoWindow[j].close();
+function markerEvent1(i){
+    marker1[i].addListener('click',function(){
+    for (var j = 0; j < markerData1.length; j++){ // Windowは一つだけ表示
+        infoWindow1[j].close();
     }
-        infoWindow[i].open(map,marker[i]);
+        infoWindow1[i].open(map,marker1[i]);
+    });
+}
+
+
+function markerEvent2(i){
+    marker2[i].addListener('click',function(){
+    for (var j = 0; j < markerData2.length; j++){ // Windowは一つだけ表示
+        infoWindow2[j].close();
+    }
+        infoWindow2[i].open(map,marker2[i]);
     });
 }
 
