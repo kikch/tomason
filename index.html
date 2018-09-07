@@ -14,6 +14,9 @@
 </head>
 
 <body>
+
+<h1>トマソン（ロゴ）</h1>
+
 <div class="form row">
 <div class="col-md-1 col-sm-2">
 <select id="cities" class ="form-control">
@@ -23,13 +26,14 @@
 </select>
 </div>
 </div>
-  
+
 <div class="map">
-<div id="map">ここにmap表示</div>
+<div id="map">MAPが正しく表示されていません</div>
 </div>
 
 <div class="element">
 <h2>トマソンリスト</h2>
+<p>以下に表を載せる</p>
 <div class="table_csv"></div>
 <script>
 $(function(){
@@ -41,6 +45,13 @@ $('#table_csv').CSVToTable("./csv/test.csv");
 <div class="events">
 <div id="messages"></div>
 </div>
+
+<ul class ="footer">
+<li><a href="https://www">お問い合わせ</a></li>
+<li><a href="https://www">プライバシー</a></li>
+<li><a href="https://www">利用条件</a></li>
+<li><a href="https://www">アクセシビリティ</a></li>
+</ul>
 
 </body>
 </html>
