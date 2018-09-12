@@ -5,19 +5,19 @@ var cities={
 };
 
 var markerData1=[
-{name:'Tomason_1',lat:35.681971,lng:139.746751},
-{name:'Tomason_2',lat:35.681971,lng:139.756751},
-{name:'Tomason_3',lat:35.681971,lng:139.766751},
-{name:'Tomason_4',lat:35.681971,lng:139.776751},
-{name:'Tomason_5',lat:35.681971,lng:139.786751},
+{name:'Tomason_1',img:'blue.png',lat:35.681971,lng:139.746751},
+{name:'Tomason_2',img:'thomason.png',lat:35.681971,lng:139.756751},
+{name:'Tomason_3',img:'red.png',lat:35.681971,lng:139.766751},
+{name:'Tomason_4',img:'yellow.png',lat:35.681971,lng:139.776751},
+{name:'Tomason_5',img:'tmsn.jpg',lat:35.681971,lng:139.786751},
 ];
 
 var markerData2=[
-{name:'Tomason_6',lat:34.946982,lng:135.753936},
-{name:'Tomason_7',lat:34.956982,lng:135.753936},
-{name:'Tomason_8',lat:34.966982,lng:135.753936},
-{name:'Tomason_9',lat:34.976982,lng:135.753936},
-{name:'Tomason_10',lat:34.986982,lng:135.753936},
+{name:'Tomason_6',img:'blue.png',lat:34.946982,lng:135.753936},
+{name:'Tomason_7',img:'thomason.png',lat:34.956982,lng:135.753936},
+{name:'Tomason_8',img:'red.png',lat:34.966982,lng:135.753936},
+{name:'Tomason_9',img:'yellow.png',lat:34.976982,lng:135.753936},
+{name:'Tomason_10',img:'tmsn.jpg',lat:34.986982,lng:135.753936},
 ];
 
 
@@ -64,7 +64,11 @@ for (var i = 0; i < markerData1.length; i++){
         //label:"ト",
 });
 infoWindow1[i] = new google.maps.InfoWindow({
-    content:'<div class="sample">'+markerData1[i]['name'] + '</div>'
+    content:'<div class="info">'+
+            '<img src="./img/'+markerData1[i]['img'] + '" width="75" height="75" />'+
+	    '<br>'+
+            '<a href="http://www">'+markerData1[i]['name'] + '</a>'+
+	    '</div>'
 });
 markerEvent1(i);
 }
@@ -80,7 +84,11 @@ for (var i = 0; i < markerData2.length; i++){
         },
 });
 infoWindow2[i] = new google.maps.InfoWindow({
-    content:'<div class="sample">'+markerData2[i]['name'] + '</div>'
+    content:'<div class="info">'+
+            '<img src="./img/'+markerData2[i]['img'] + '" width="75" height="75" />'+
+	    '<br>'+
+            '<a href="http://www">'+markerData2[i]['name'] + '</a>'+
+	    '</div>'
 });
 markerEvent2(i);
 }
