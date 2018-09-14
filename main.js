@@ -276,7 +276,7 @@ function convertCSVtoArray(str){
 }
 
 //getCSV();
-//google.maps.event.addDomListener( window, 'load', initMap );
+google.maps.event.addDomListener( window, 'load', initMap );
 
 /*住所から座標を取得
 var geocoder = new google.maps.Geocoder();
