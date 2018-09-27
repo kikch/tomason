@@ -6,7 +6,7 @@ html,body{
     top: 0px;
     /*padding: 0 0 56%;*/
     width:100%;
-    height: calc(100vh - 125px);
+    height: calc(100vh - 130px);
     overflow: hidden;
 }
 
