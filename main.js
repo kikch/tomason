@@ -172,7 +172,11 @@ infoWindow1[i] = new google.maps.InfoWindow({
     content:'<div class="info">'+
             '<img src="./img/'+markerData1[i]['img'] + '" width="75" height="75" />'+
 	    '<br>'+
-            '<a href="http://www">'+markerData1[i]['name'] + '</a>'+
+	    '<p>'+markerData1[i]['star'] + '</p>'+
+	    '<br>'+
+            '<p>'+markerData1[i]['categ'] + '</p>'+
+	    '<br>'+
+            '<a href="http://www">詳細'</a>'+
 	    '</div>'
 });
 markerEvent1(i);
@@ -192,7 +196,11 @@ infoWindow2[i] = new google.maps.InfoWindow({
     content:'<div class="info">'+
             '<img src="./img/'+markerData2[i]['img'] + '" width="75" height="75" />'+
 	    '<br>'+
-            '<a href="http://www">'+markerData2[i]['name'] + '</a>'+
+	    '<p>'+markerData2[i]['star'] + '</p>'+
+	    '<br>'+
+            '<p>'+markerData2[i]['categ'] + '</p>'+
+	    '<br>'+
+            '<a href="http://www">詳細'</a>'+
 	    '</div>'
 });
 markerEvent2(i);
