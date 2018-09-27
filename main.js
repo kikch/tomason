@@ -176,7 +176,7 @@ infoWindow1[i] = new google.maps.InfoWindow({
 	    '<br>'+
             '<p>'+markerData1[i]['categ'] + '</p>'+
 	    '<br>'+
-            '<a href="http://www">詳細'</a>'+
+            '<a href="http://www">' +"詳細" + '</a>'+
 	    '</div>'
 });
 markerEvent1(i);
@@ -200,7 +200,7 @@ infoWindow2[i] = new google.maps.InfoWindow({
 	    '<br>'+
             '<p>'+markerData2[i]['categ'] + '</p>'+
 	    '<br>'+
-            '<a href="http://www">詳細'</a>'+
+            '<a href="http://www">' + "詳細" +'</a>'+
 	    '</div>'
 });
 markerEvent2(i);
