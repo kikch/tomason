@@ -173,9 +173,7 @@ infoWindow1[i] = new google.maps.InfoWindow({
             '<img src="./img/'+markerData1[i]['img'] + '" width="75" height="75" />'+
 	    '<br>'+
 	    '<p>'+markerData1[i]['star'] + '</p>'+
-	    '<br>'+
             '<p>'+markerData1[i]['categ'] + '</p>'+
-	    '<br>'+
             '<a href="http://www">' +"詳細" + '</a>'+
 	    '</div>'
 });
