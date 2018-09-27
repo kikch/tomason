@@ -1,8 +1,12 @@
+html,body{
+    height=100%;
+}
 .map{
     position: relative;
     top: 10px;
-    padding: 0 0 56%;
-    height: 0;
+    /*padding: 0 0 56%;*/
+    width:100%;
+    height: 85vh;
     overflow: hidden;
 }
 
@@ -62,3 +66,142 @@ display: inline;
 text-align: center;
 margin-right: 10px;
 }
+
+
+
+
+* {
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+a,
+a:visited,
+a:hover,
+a:active {
+text-decoration: none;
+color: inherit;
+}
+input {
+display: none;
+}
+
+/*menuコンテンツ*/
+.cp_fullscreenmenu .menu {
+position: fixed;
+top: 0;
+left: 0;
+visibility: hidden;
+width: 100%;
+height: 100%;
+transition: all 0.3s ease-in-out;
+opacity: 0;
+background-image: linear-gradient(to top, rgba(255,94,82,0.8) 0%, rgba(255,94,82,0.5) 100%);
+}
+
+.cp_fullscreenmenu .menu ul {
+position: absolute;
+top: 170px;
+left: 50%;
+margin: 0;
+padding: 0;
+list-style-type: none;
+transition: all 0.3s ease-in-out;
+-webkit-transform: translateX(-50%);
+transform: translateX(-50%);
+}
+
+.cp_fullscreenmenu .menu ul li {
+-webkit-transform: translateY(50px);
+transform: translateY(50px);
+opacity: 0;
+}
+
+.cp_fullscreenmenu .menu ul li a {
+font-size: 2em;
+font-weight: bold;
+display: block;
+padding: 10px 0;
+transition: all 0.2s ease-in-out;
+text-align: center;
+text-decoration: none;
+color: #ffffff;
+text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.cp_fullscreenmenu .menu ul li a:hover {
+color: rgba(255,255,87,1);
+}
+/*クリックしたらメニューが開閉の動作*/
+.cp_fullscreenmenu #toggle:checked ~ .menu {
+visibility: visible;
+opacity: 1;
+}
+
+.cp_fullscreenmenu #toggle:checked ~ .menu ul {
+top: 70px;
+}
+.cp_fullscreenmenu #toggle:checked ~ .menu ul li {
+-webkit-transform: translateY(0px);
+transform: translateY(0px);
+opacity: 1;
+}
+
+.cp_fullscreenmenu #toggle:checked ~ .menu ul li:nth-child(1) {
+transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.1s;
+}
+
+.cp_fullscreenmenu #toggle:checked ~ .menu ul li:nth-child(2) {
+transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.2s;
+}
+
+.cp_fullscreenmenu #toggle:checked ~ .menu ul li:nth-child(3) {
+transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.3s;
+}
+
+.cp_fullscreenmenu #toggle:checked ~ .menu ul li:nth-child(4) {
+transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.4s;
+}
+
+.cp_fullscreenmenu #toggle:checked + label.hamburger .bar {
+background-color: rgba(255,255,255 ,1);
+}
+
+.cp_fullscreenmenu #toggle:checked + label.hamburger .bar:nth-child(2) {
+-webkit-transform: translateX(50px);
+transform: translateX(50px);
+opacity: 0;
+}
+
+.cp_fullscreenmenu #toggle:checked + label.hamburger .bar:nth-child(1) {
+-webkit-transform: translateY(10px) rotate(45deg);
+transform: translateY(10px) rotate(45deg);
+}
+
+.cp_fullscreenmenu #toggle:checked + label.hamburger .bar:nth-child(3) {
+-webkit-transform: translateY(-8px) rotate(-45deg);
+transform: translateY(-8px) rotate(-45deg);
+}
+
+/*ハンバーガー*/
+.cp_fullscreenmenu .hamburger {
+position: fixed;
+z-index: 10;
+top: 10px;
+right: 10px;
+display: block;
+cursor: pointer;
+}
+
+.cp_fullscreenmenu .hamburger .bar {
+width: 30px;
+height: 2px;
+margin: 7px auto;
+transition: all 0.3s ease-in-out;
+background-color: rgba(240,98,146 ,1);
+}
+
+.cp_fullscreenmenu .hamburger .bar:nth-child(2) {
+width: 20px;
+}
+
+

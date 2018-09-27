@@ -55,7 +55,7 @@ var map = new google.maps.Map(document.getElementById('map'),{
     streetViewControl:false,
     zoomControl:true,
     scaleControl:true,
-    fullscreenControl:true,
+    fullscreenControl:false,
     styles:
 	[
     {
@@ -274,6 +274,7 @@ function convertCSVtoArray(str){
     }
     //alert(result[1][1]);
 }
+
 
 //getCSV();
 google.maps.event.addDomListener( window, 'load', initMap );
