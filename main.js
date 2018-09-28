@@ -5,7 +5,7 @@ var cities={
 };
 
 var req = new XMLHttpRequest();
-req.open("GET", "list.js", false);
+req.open("GET", "./js/list.js", false);
 req.send("");
 eval(req.responseText);
 
