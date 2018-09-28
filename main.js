@@ -230,24 +230,6 @@ function addMessage(msg){
     events.appendChild(pre);
 }
 
-function getCSV(){
-    var req = new XMLHttpRequest();
-    req.open("get","./csv/test.csv",true);
-    req.send(null);
-    req.onload = function(){
-        convertCSVtoArray(req.responseText);
-    }
-}
-
-function convertCSVtoArray(str){
-    var result = [];
-    var tmp = str.split("\r");
-    for(var i = 0; i < tmp.length; i++){
-        result[i] = tmp[i].split(',');
-    }
-    //alert(result[1][1]);
-}
-
 
 //getCSV();
 google.maps.event.addDomListener( window, 'load', initMap );
