@@ -170,7 +170,7 @@ for (var i = 0; i < markerData1.length; i++){
 });
 infoWindow1[i] = new google.maps.InfoWindow({
     content:'<div class="info">'+
-            '<img src="./img/'+markerData1[i]['img'] + '" width="75" height="75" />'+
+            '<img src="./img/'+markerData1[i]['img'] + '" width="80" height="80" />'+
 	    '<br>'+
 	    '<p>'+markerData1[i]['star'] + '</p>'+
             '<p>'+markerData1[i]['categ'] + '</p>'+
@@ -193,7 +193,7 @@ for (var i = 0; i < markerData2.length; i++){
 });
 infoWindow2[i] = new google.maps.InfoWindow({
     content:'<div class="info">'+
-            '<img src="./img/'+markerData2[i]['img'] + '" width="75" height="75" />'+
+            '<img src="./img/'+markerData2[i]['img'] + '" width="80" height="80" />'+
 	    '<br>'+
 	    '<p>'+markerData2[i]['star'] + '</p>'+
             '<p>'+markerData2[i]['categ'] + '</p>'+
