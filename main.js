@@ -174,7 +174,8 @@ infoWindow1[i] = new google.maps.InfoWindow({
 	    '<br>'+
 	    '<p>'+markerData1[i]['star'] + '</p>'+
             '<p>'+markerData1[i]['categ'] + '</p>'+
-            '<a href="./page/list.html">' +"詳細へ" + '</a>'+
+         /*   '<a href="./page/list.html">' +"詳細へ" + '</a>'+*/
+	    '<button onclick="on()">'+ "詳細へ" +'</button>'+
 	    '</div>'
 });
 markerEvent1(i);
@@ -196,7 +197,8 @@ infoWindow2[i] = new google.maps.InfoWindow({
 	    '<br>'+
 	    '<p>'+markerData2[i]['star'] + '</p>'+
             '<p>'+markerData2[i]['categ'] + '</p>'+
-            '<a href="./page/list.html">' + "詳細へ" +'</a>'+
+           /* '<a href="./page/list.html">' + "詳細へ" +'</a>'+*/
+	    '<button onclick="on()">'+ "詳細へ" +'</button>'+
 	    '</div>'
 });
 markerEvent2(i);
@@ -228,6 +230,14 @@ function addMessage(msg){
     var pre=document.createElement("pre");
     pre.innerHTML=msg;
     events.appendChild(pre);
+}
+
+function on() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+    document.getElementById("overlay").style.display = "none";
 }
 
 
