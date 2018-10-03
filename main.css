@@ -69,8 +69,8 @@ html,body{
 }
 
 #overlay1 > #overlay2 > #text > .center > img{
-    width:100%;
-    max-width:250px;
+    width:85%;
+    max-width:300px;
 }
 
 .container{
