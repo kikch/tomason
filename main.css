@@ -44,8 +44,7 @@ html,body{
 
 #text{
     position: absolute;
-    width: 80%;
-    font-size: 20px;
+    font-size: 16px;
     color: white;
     top: 50%;
     left: 50%;
