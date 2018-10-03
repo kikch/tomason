@@ -70,7 +70,7 @@ html,body{
 
 #overlay1 > #overlay2 > #text > .center > img{
     width:100%;
-    max-width:280px;
+    max-width:250px;
 }
 
 .container{
