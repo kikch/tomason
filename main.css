@@ -7,6 +7,10 @@ html,body{
     border:none;
 }
 
+.center{
+    text-align:center;
+}
+
 .map{
     position: relative;
     top: 0px;
