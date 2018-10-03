@@ -233,11 +233,13 @@ function addMessage(msg){
 }
 
 function on() {
-    document.getElementById("overlay").style.display = "block";
+    document.getElementById("overlay1").style.display = "block";
+    document.getElementById("overlay2").style.display = "block";
 }
 
 function off() {
-    document.getElementById("overlay").style.display = "none";
+    document.getElementById("overlay1").style.display = "none";
+    document.getElementById("overlay2").style.display = "none";
 }
 
 
